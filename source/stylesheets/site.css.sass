@@ -17,10 +17,24 @@ body
     color: #fff
 
   .btn
-    border-radius: none
-    background: #F62051
+    border-radius: 0px
+    background: #FD1E50
     padding: 10px
     text-transform: uppercase
+    text-shadow: none
+    color: #fff
+    font-family: $franklin
+    font-size: 16px
+    padding: 18px 60px
+    letter-spacing: 1px
+    border: none
+    +transition(.3s)
+
+    &:hover
+      background-color: #FE9299
+      color: #fff
+      +transition(.6s)
+
 
   header
     background: black
@@ -58,6 +72,20 @@ body
       text-transform: uppercase
       font-size: 16px
       font-family: $franklin
+      text-align: center
+
+    .dates
+      text-align: center
+      font-family: $franklin
+      font-size: 36px
+      span
+        color: #aaa
+
+    #register
+      margin: 20px 0
+      text-align: center
+
+
 
     .top-bar
       ul
