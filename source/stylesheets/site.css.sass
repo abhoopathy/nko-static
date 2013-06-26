@@ -1,0 +1,85 @@
+//HTML5 Boilerplate + Normalize
+//= require "_vendor/normalize.scss"
+//= require "_vendor/html5bp.css"
+
+//= require "_vendor/bootstrap.min.css"
+
+@import "bourbon"
+@import "fonts.css.sass"
+
+body
+  margin: 0
+  padding: 0
+  font-family: $freight
+
+  ::selection
+    background: #F62051
+    color: #fff
+
+  .btn
+    border-radius: none
+    background: #F62051
+    padding: 10px
+    text-transform: uppercase
+
+  header
+    background: black
+    color: #fff
+    width: 100%
+
+    h1
+      a.title-block
+        display: inline-block
+        border: 4px solid #fff
+        padding: 3px 11px
+        margin: 10px 0
+        color: #fff
+        text-transform: uppercase
+        font-family: $franklin
+        font-size: 16px
+        font-weight: 700
+        text-decoration: none
+
+        &:hover
+          background: #F62051
+          border-color: transparent
+          +transition(.5s)
+
+
+    h2.subhead
+      font-family: $franklin
+      color: #fff
+      font-size: 46px
+
+  section#top
+
+    h3.mini
+      color: #F62051
+      text-transform: uppercase
+      font-size: 16px
+      font-family: $franklin
+
+    .top-bar
+      ul
+        li
+          text-transform: uppercase
+          list-style-type: none
+          display: inline-block
+
+    h1.heading
+      border-top: 1px solid #eee
+      font-family: $franklin
+      font-weight: 400
+      font-size:  14px
+      text-transform: uppercase
+      margin: 0
+
+    p
+      font-size: 20px
+
+
+
+
+
+
+
