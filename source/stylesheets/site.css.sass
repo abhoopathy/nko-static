@@ -12,6 +12,14 @@ body
   padding: 0
   font-family: $freight
 
+  h1.heading
+    border-top: 1px solid #eee
+    font-family: $franklin
+    font-weight: 400
+    font-size:  14px
+    text-transform: uppercase
+    margin: 0
+
   ::selection
     background: #F62051
     color: #fff
@@ -37,7 +45,11 @@ body
 
 
   header
-    background: black
+    background: #000 url("/images/gloves-large.jpg")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 60%
+    height: 200px
     color: #fff
     width: 100%
 
@@ -63,7 +75,7 @@ body
     h2.subhead
       font-family: $franklin
       color: #fff
-      font-size: 46px
+      font-size: 52px
 
   section#top
 
@@ -87,20 +99,25 @@ body
 
 
 
-    .top-bar
+    .navbar
+      font-family: $franklin
+      width: 700px
+      margin: 0 auto
+
+      .navbar-inner
+        border: none
+        background: #fff
+
       ul
         li
           text-transform: uppercase
           list-style-type: none
           display: inline-block
-
-    h1.heading
-      border-top: 1px solid #eee
-      font-family: $franklin
-      font-weight: 400
-      font-size:  14px
-      text-transform: uppercase
-      margin: 0
+          a
+            color: #444
+            &:hover
+              color: #F62051
+              +transition(1s)
 
     p
       font-size: 28px
@@ -110,22 +127,22 @@ body
     .date-box
       text-transform: uppercase
       font-family: $franklin
-      line-height: 1.6
+      line-height: 1.8
       font-size: 13px
+      color: #999
+      background: #f1f1f1
+      padding: 18px
 
-      .date
+      .event-left
         float: left
-        width: 50%
+        position: relative
 
-      .line
-        color: #aaa
-        float: left
-        overflow: hidden
-        width: 30%
-
-      .right
+      .event-date
         float: right
-        width: 50%
+        white-space: nowrap
+        text-align: right
+        &:before
+          content: "............................. "
 
 
 

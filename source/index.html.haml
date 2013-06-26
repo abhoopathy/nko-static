@@ -1,23 +1,31 @@
 
 
 %header
-  %h1
-    %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
-  %h2.subhead {2013}
+  .container
+    %h1
+      %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
+    %h2.subhead {2013}
 
 
 %section#top
   .container
-    .sticky
-      %nav.top-bar
-        %ul.title-area
-          %li registration
-          %li NKO2013
-          %li Prizes
-          %li sponsors
-          %li rules
-          %li resources
-          %li blog
+    .navbar.sticky
+      .navbar-inner
+        %ul.nav
+          %li
+            %a{:href => "#registration"} registration
+          %li
+            %a{:href => "#NKO2013"} NKO2013
+          %li
+            %a{:href => "#prizes"} Prizes
+          %li
+            %a{:href => "#sponsors"} sponsors
+          %li
+            %a{:href => "#rules"} rules
+          %li
+            %a{:href => "#resources"} resources
+          %li
+            %a{:href => "#blog"} blog
 
     %h3.mini
       Main event
@@ -36,18 +44,39 @@
       .span6
         %p Node Knockout is a 48-hour hackathon featuring node.js. It's an online, virtual competition with contestants worldwide.
 
-      .span4.offset2.date-box
+      .span5.date-box
         important dates to remember<br>
-        .date open for registration
-        .line ............................
-        .right June 30, 2013
+        .event-left open for registration
+        .event-date June 30, 2013
 
-        .date open for registration
-        .line ............................
-        .right June 30, 2013
+        .event-left competition event-dates
+        .event-date September 6-8, 2013
 
-        .date open for registration
-        .line ............................
-        .right June 30, 2013
+        .event-left judging period
+        .event-date September 10-17, 2013
+
+        .event-left winners announced
+        .event-date September 18, 2013
+
+
+%section#sponsors
+  .container
+    %h1.heading sponsors
+
+    %a.btn sign up to sponsor
+
+
+%section#rules
+
+%section#resources
+
+%section#blog
+
+
+-# Modals for Sign up as a sponsor goes here
+
+
+
+
 
 
