@@ -1,82 +1,166 @@
 
 
 %header
-  .container
-    %h1
-      %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
-    %h2.subhead {2013}
+    .container
+        %h1
+            %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
+        %h2.subhead {2013}
 
 
 %section#top
-  .container
-    .navbar.sticky
-      .navbar-inner
-        %ul.nav
-          %li
-            %a{:href => "#registration"} registration
-          %li
-            %a{:href => "#NKO2013"} NKO2013
-          %li
-            %a{:href => "#prizes"} Prizes
-          %li
-            %a{:href => "#sponsors"} sponsors
-          %li
-            %a{:href => "#rules"} rules
-          %li
-            %a{:href => "#resources"} resources
-          %li
-            %a{:href => "#blog"} blog
+    .container
+        .navbar.sticky
+            .navbar-inner
+                %ul.nav
+                    %li
+                        %a{:href => "#registration"} registration
+                    %li
+                        %a{:href => "#NKO2013"} NKO2013
+                    %li
+                        %a{:href => "#prizes"} Prizes
+                    %li
+                        %a{:href => "#sponsors"} sponsors
+                    %li
+                        %a{:href => "#rules"} rules
+                    %li
+                        %a{:href => "#resources"} resources
+                    %li
+                        %a{:href => "#blog"} blog
 
-    %h3.mini
-      Main event
+        .top-callout.l-center-text
+            %h3.mini
+                Main event
 
-    .dates
-      Sep 6-8 <span>•</span> 2013
+            .dates
+                Sep 6-8 <span>•</span> 2013
 
-    #register
-      %a.btn
-        Register
-
-    %h1.heading About NKO2013
+            %a.btn#register
+                Register
 
 
-    .row
-      .span6
-        %p Node Knockout is a 48-hour hackathon featuring node.js. It's an online, virtual competition with contestants worldwide.
+        %h1.heading.border-top About NKO2013
 
-      .span5.date-box
-        important dates to remember<br>
-        .event-left open for registration
-        .event-date June 30, 2013
+        .row
+            .span6
 
-        .event-left competition event-dates
-        .event-date September 6-8, 2013
+                %p.big-text
+                    Node Knockout is a 48-hour hackathon featuring node.js. It's an
+                    online, virtual competition with contestants worldwide.
 
-        .event-left judging period
-        .event-date September 10-17, 2013
+            .span5.events
+                %h2 important dates to remember
+                .event
+                    .event-left open for registration
+                    .event-date June 30, 2013
 
-        .event-left winners announced
-        .event-date September 18, 2013
+                .event
+                    .event-left competition event-dates
+                    .event-date September 6-8, 2013
+
+                .event
+                    .event-left judging period
+                    .event-date September 10-17, 2013
+
+                .event
+                    .event-left winners announced
+                    .event-date September 18, 2013
 
 
 %section#sponsors
-  .container
-    %h1.heading sponsors
+    .container
+        %h1.heading Sponsors
 
-    %a.btn sign up to sponsor
+        .l-center-text
+            %a.btn sign up to sponsor
+
+        .grid.sponsor-list
+            - (1..12).each do
+                .grid-cell.sponsor
+                    %a{:href=>"#"}
+                        %img.sponsor-table-img{:src => "https://client-side-rendering-talk.nodejitsu.com/img/nodejitsu.png"}
 
 
-%section#rules
+.sub-section#prizes
+    .container
+        %h1.heading Prizes
 
-%section#resources
+        .tabs.prizes-wrapper
 
-%section#blog
+            .tab-list
+                .tab-list-item.is-selected
+                    %h2 Team Winner
+                    %p Team with the best overall score
+                - (1..6).each do
+                    .tab-list-item
+                        %h2 Team Winner
+                        %p Team with the best overall score
+
+            .tab-panels
+                .tab-panel.is-selected
+                    %p Team Winner
+                - (1..7).each do
+                    .tab-panel
+                        %p Team Winner
+
+.sub-section.small#judges
+    .container
+        .grid.person-list
+            %h1.heading Judges
+            -(1..8).each do
+                .grid-cell.person
+                    .person-image
+                        %img{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+                    %h3.person-name Paul Graham
+                    .person-links
+                        %a{:href=>"#"}
+                            %i.icon-twitter
+                        %a{:href=>"#"}
+                            %i.icon-linkedin
+
+.sub-section.small#press-kit
+    %h1.heading Press Kit
+    %a.btn#btn-presskit-images{:href=>'#'}
+        Images (ZIP)
+    %a.btn#btn-presskit-images{:href=>'#'}
+        PDF / Text
+    .poster.l-clear
+        %img.poster-thumbnail.l-left{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+        .poster-info.l-left
+            .l-clear
+                %a.btn#btn-presskit-poster{:href=>'#'} Download Poster
+            %p
+                %b Step 1:
+            %p Download and print this poster and put it in your break room.
+
+            %p
+                %b Step 2:
+            %p Get fired up.
+
+
+.sub-section.small#team
+    .container
+        .grid.person-list
+            %h1.heading Team
+            -(1..4).each do
+                .grid-cell.person
+                    .person-image
+                        %img{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+                    %h3.person-name Paul Graham
+                    .person-links
+                        %a{:href=>"#"}
+                            %i.icon-twitter
+                        %a{:href=>"#"}
+                            %i.icon-linkedin
+                        %a{:href=>"#"}
+                            %i.icon-envelope
+
+
+
+-#%section#rules
+
+-#%section#resources
+
+-#%section#blog
 
 
 -# Modals for Sign up as a sponsor goes here
-
-
-
-
-
-

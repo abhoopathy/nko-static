@@ -7,27 +7,112 @@
 @import "bourbon"
 @import "fonts.css.sass"
 
-body
-  margin: 0
-  padding: 0
-  font-family: $freight
+/* Colors */
+$text-color: #909090
+$heading-color: lighten(#333,10%)
+$secondary-color: #FD1E50 //pinkish color used for buttons, CTAs,
+//$link-color: #FD1E50
+//$link-hover-color: #FD1E50
 
-  h1.heading
-    border-top: 1px solid #eee
+
+*
+    box-sizing: border-box
+
+body
+    margin: 0
+    padding: 0
+    font-size: 10px
+    line-height: 1.2em
+
+p, li
+    font-family: $freight
+    color: $text-color
+    font-size: 1.8em
+    line-height: 1.1em
+
+b
+    color: darken($text-color,40%)
+    font-weight: bold
+
+p.big-text
+    font-size: 3em
+
+a
+    font-size: 1.4em
+
+    i
+        text-decoration: none !important
+
+input, textarea
+    color: lighten($text-color,10%)
+    &:focus
+        outline: 0
+        color: darken($text-color,5%)
+
+
+
+//layout classes
+
+.l-clear
+    +clearfix
+.l-left
+    float: left
+.l-right
+    float: right
+.l-center-text
+    text-align: center
+.l-center
+    margin-left: auto
+    margin-right: auto
+
+
+h1
+    color: $heading-color
     font-family: $franklin
     font-weight: 400
-    font-size:  14px
+    font-size:  1.5em
+    text-transform: uppercase
+    letter-spacing: .08em
+    margin: 10px 0  0
+
+h1.helvetica
+    color: $heading-color
+    font-family: 'Helvetica'
+    font-weight: bold
+    font-size:  1.8em
+    letter-spacing: .08em
+    margin: 10px 0  0
+    text-transform: none
+
+.border-top
+    border-top: 1px solid #eee
+    margin: 40px 0 0 0
+
+h2
+    color: $heading-color
+    font-family: 'Helvetica'
+    //font-family: $franklin
+    //font-weight: 400
+    font-size:  1.4em
+    text-transform: uppercase
+    margin: 0
+    letter-spacing: .08em
+h3
+    color: lighten($heading-color,20%)
+    font-family: $franklin
+    font-weight: 400
+    font-size:  1.3em
     text-transform: uppercase
     margin: 0
 
-  ::selection
-    background: #F62051
+
+::selection
+    background: $secondary-color
     color: #fff
 
-  .btn
+.btn
     border-radius: 0px
-    background: #FD1E50
-    padding: 10px
+    background: $secondary-color
     text-transform: uppercase
     text-shadow: none
     color: #fff
@@ -39,12 +124,12 @@ body
     +transition(.3s)
 
     &:hover
-      background-color: #FE9299
-      color: #fff
-      +transition(.6s)
+        background-color: #FE9299
+        color: #fff
+        +transition(.6s)
 
 
-  header
+header
     background: #000 url("/images/gloves-large.jpg")
     background-repeat: no-repeat
     background-position: center
@@ -54,99 +139,334 @@ body
     width: 100%
 
     h1
-      a.title-block
-        display: inline-block
-        border: 4px solid #fff
-        padding: 3px 11px
-        margin: 10px 0
-        color: #fff
-        text-transform: uppercase
-        font-family: $franklin
-        font-size: 16px
-        font-weight: 700
-        text-decoration: none
+        a.title-block
+            display: inline-block
+            border: 4px solid #fff
+            padding: 3px 11px
+            margin: 10px 0
+            color: #fff
+            text-transform: uppercase
+            font-family: $franklin
+            font-size: 16px
+            font-weight: 700
+            text-decoration: none
 
-        &:hover
-          background: #F62051
-          border-color: transparent
-          +transition(.5s)
+            &:hover
+                background: #F62051
+                border-color: transparent
+                +transition(.5s)
 
 
     h2.subhead
-      font-family: $franklin
-      color: #fff
-      font-size: 52px
+        font-family: $franklin
+        color: #fff
+        font-size: 52px
 
-  section#top
-
-    h3.mini
-      color: #F62051
-      text-transform: uppercase
-      font-size: 16px
-      font-family: $franklin
-      text-align: center
-
-    .dates
-      text-align: center
-      font-family: $franklin
-      font-size: 36px
-      span
-        color: #aaa
-
-    #register
-      margin: 20px 0
-      text-align: center
-
-
+section#top
 
     .navbar
-      font-family: $franklin
-      width: 700px
-      margin: 0 auto
+        font-family: $franklin
+        width: 700px
+        margin: 0 auto
 
-      .navbar-inner
-        border: none
-        background: #fff
+        .navbar-inner
+            border: none
+            background: #fff
 
-      ul
-        li
-          text-transform: uppercase
-          list-style-type: none
-          display: inline-block
-          a
-            color: #444
-            &:hover
-              color: #F62051
-              +transition(1s)
+        ul
+            li
+                text-transform: uppercase
+                list-style-type: none
+                display: inline-block
+                a
+                    font-family: $franklin
+                    font-size: .8em
+                    line-height: 1.1em
+                    color: #444
+                    &:hover
+                        color: #F62051
+                        +transition(1s)
 
-    p
-      font-size: 28px
-      line-height: 1.3
-      color: #909090
+.top-callout
+    margin: 40px 0
 
-    .date-box
-      text-transform: uppercase
-      font-family: $franklin
-      line-height: 1.8
-      font-size: 13px
-      color: #999
-      background: #f1f1f1
-      padding: 18px
+    h3.mini
+        color: #F62051
+        text-transform: uppercase
+        font-size: 16px
+        font-family: $franklin
 
-      .event-left
+    .dates
+        font-family: $franklin
+        font-size: 36px
+        span
+            color: #aaa
+    #register
+        margin: 20px 0
+        display: inline-block
+
+
+.grey-box
+    margin-top: 40px
+    margin-bottom: 40px
+    color: #999
+    background: #f1f1f1
+    padding: 18px
+
+    h2
+        border-bottom: 1px solid lightgrey
+        margin-bottom: 20px
+
+    .big-text
+        font-size: 2em
+        font-family: $franklin
+
+.events
+    color: #999
+    background: #f1f1f1
+    padding: 18px
+
+    .event
+        font-family: $franklin
+        text-transform: uppercase
+        line-height: 1.8
+        font-size: 13px
+        border-bottom: 2px dotted grey
+        +clearfix
+
+    .event-left
         float: left
-        position: relative
 
-      .event-date
+        position: relative
+        padding-right: 2px
+        bottom: -9px
+        background-color: #f1f1f1
+
+    .event-date
         float: right
         white-space: nowrap
-        text-align: right
-        &:before
-          content: "............................. "
+
+        position: relative
+        padding-left: 2px
+        bottom: -9px
+        background-color: #f1f1f1
 
 
+.grid
+    margin: 40px 0 0 0
+    .grid-cell
+        float: left
+
+@mixin grid-cell($numCols)
+    width: 100%/$numCols
+    &:nth-child(#{$numCols}n)
+        border-right: none
+    &:nth-last-child(-n+#{$numCols})
+        border-bottom: none
+
+.grid-cell.sponsor
+    height: 100px
+    border-right: 1px solid lightgrey
+    border-bottom: 1px solid lightgrey
+    +grid-cell(4)
+    position: relative
+
+    img
+        opacity: .5
+        position: absolute
+        margin: auto
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+        &:hover
+            opacity: 1
+
+.grid.person-list
+    width: 135px * 4
+
+.grid-cell.person
+    float: left
+    width: 135px
+    padding: 5px
+    margin-bottom: 10px
+
+    .person-image
+        width: 125px
+        height: 125px
+        overflow: hidden
+        img
+            width: 100%
+
+    .person-name
+        line-height: 2em
+        font-weight: lighter
+
+    .person-links
+        i
+            background-color: lighten(#333,55%)
+            color: white
+            font-size: 1.2em
+            padding: 3px
+            border-radius: 3px
+
+/* press kit */
+#press-kit
+    .poster
+        margin-top: 30px
+
+    img.poster-thumbnail
+        width: 150px
+        margin-right: 20px
+        border: 5px solid lighten(#333,65%)
+
+    .poster-info
+        width: 220px
+
+    .btn#btn-presskit-poster
+        font-size: 1.3em
+        padding: 1em 2em
+        margin-bottom: 20px
 
 
+.tabs
+    background-color: white
+    border: 20px solid lighten(#333,65%)
+    +clearfix
 
+    .tab-list
+        width: 20%
+        float: left
 
+        .tab-list-item
+            background-color: lighten(#333,65%)
+            padding: 5px 10px
 
+            &.is-selected
+                background-color: white
+
+            &:hover:not(.is-selected)
+                cursor: pointer
+                background-color: darken(#fff,10%)
+
+    .tab-panels
+        float: left
+        width: 80%
+        background-color: white
+        padding: 20px
+
+.sub-section
+    margin-top: 40px
+    margin-bottom: 40px
+    &.small
+        width: 135px * 4
+        margin: auto
+
+#social
+    padding: 40px 0
+    margin-top: 40px
+    background-color: lighten(#333,70%)
+    .social-link
+        font-weight: 200
+        font-size: 1em
+        text-transform: none
+        letter-spacing: -.01em
+
+p.tweet,
+    font-family: $franklin
+    padding: 10px
+    letter-spacing: -.01em
+    color: $heading-color
+    background-color: white
+
+p.tumblr-post
+    font-family: $franklin
+    padding: 10px
+    border-bottom: 1px dotted lightgrey
+
+section#subscribe
+    background-color: lighten(#333,65%)
+    padding: 40px 0
+
+    .l-center
+        width: 700px
+        margin-bottom: 40px
+
+    $subscribe-input-height: 70px
+    input#subscribe-email-input
+        height: $subscribe-input-height
+        border: none
+        width: 70%
+        padding: 0 20px
+        font-size: 1.7em
+
+    .btn#subscribe-email-button
+        margin-left: -3px
+        height:  $subscribe-input-height
+        line-height: $subscribe-input-height
+        text-align: center
+        padding: 0
+        width: 30%
+
+footer
+    padding-top: 20px
+    border-top: 1px solid lighten(#333,45%)
+    .container
+        position: relative
+    .l-left
+        font-size: .9em
+    .l-right
+        a
+            margin-right: 10px
+    .l-center-text
+        position: absolute
+        width: 100%
+        text-align: center
+
+        a
+            font-size: 1.5em
+            margin: 0 10px
+            color: $secondary-color
+
+/* sponsor page*/
+
+.back-home-icon
+    margin: 20px auto
+
+    a
+        color: $heading-color
+        text-decoration: none
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 1.2em
+
+        i
+            color: lighten($heading-color, 40%)
+            font-size: 1.5em
+
+.row.platinum-sponsorship
+    margin-bottom: 30px
+
+.divider
+    width: 100%
+    height: 1px
+    margin-top: 10px
+    margin-bottom: 10px
+    border: 1px solid lighten(#333,70%)
+
+.grey-box.interested-in-sponsoring
+    border: 1px solid lightgrey
+    text-align: center
+    .divider
+        width: 60%
+        height: 1px
+        margin: 10px auto
+        border-bottom: 2px dotted lightgrey
+    h1
+        font-size: 1.8em
+    h1.phone
+        font-size: 2.4em
+
+        i.icon-phone
+            color: $secondary-color
