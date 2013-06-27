@@ -1,82 +1,151 @@
 
 
 %header
-  .container
-    %h1
-      %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
-    %h2.subhead {2013}
+    .container
+        %h1
+            %a.title-block{:href => "http://nodeknockout.com"} Node Knockout
+        %h2.subhead {2013}
 
 
 %section#top
-  .container
-    .navbar.sticky
-      .navbar-inner
-        %ul.nav
-          %li
-            %a{:href => "#registration"} registration
-          %li
-            %a{:href => "#NKO2013"} NKO2013
-          %li
-            %a{:href => "#prizes"} Prizes
-          %li
-            %a{:href => "#sponsors"} sponsors
-          %li
-            %a{:href => "#rules"} rules
-          %li
-            %a{:href => "#resources"} resources
-          %li
-            %a{:href => "#blog"} blog
+    .container
+        .navbar.sticky
+            .navbar-inner
+                %ul.nav
+                    %li
+                        %a{:href => "#registration"} registration
+                    %li
+                        %a{:href => "#NKO2013"} NKO2013
+                    %li
+                        %a{:href => "#prizes"} Prizes
+                    %li
+                        %a{:href => "#sponsors"} sponsors
+                    %li
+                        %a{:href => "#rules"} rules
+                    %li
+                        %a{:href => "#resources"} resources
+                    %li
+                        %a{:href => "#blog"} blog
 
-    %h3.mini
-      Main event
+        .top-callout
+            %h3.mini
+                Main event
 
-    .dates
-      Sep 6-8 <span>•</span> 2013
+            .dates
+                Sep 6-8 <span>•</span> 2013
 
-    #register
-      %a.btn
-        Register
-
-    %h1.heading About NKO2013
+            %a.btn#register
+                Register
 
 
-    .row
-      .span6
-        %p Node Knockout is a 48-hour hackathon featuring node.js. It's an online, virtual competition with contestants worldwide.
+            %h1.heading About NKO2013
 
-      .span5.date-box
-        important dates to remember<br>
-        .event-left open for registration
-        .event-date June 30, 2013
 
-        .event-left competition event-dates
-        .event-date September 6-8, 2013
+        .row
+            .span6
 
-        .event-left judging period
-        .event-date September 10-17, 2013
+                %p
+                    Node Knockout is a 48-hour hackathon featuring node.js. It's an
+                    online, virtual competition with contestants worldwide.
 
-        .event-left winners announced
-        .event-date September 18, 2013
+            .span5.date-box
+                important dates to remember<br>
+                .event-left open for registration
+                .event-date June 30, 2013
+
+                .event-left competition event-dates
+                .event-date September 6-8, 2013
+
+                .event-left judging period
+                .event-date September 10-17, 2013
+
+                .event-left winners announced
+                .event-date September 18, 2013
 
 
 %section#sponsors
-  .container
-    %h1.heading sponsors
+    .container
+        %h1.heading Sponsors
 
-    %a.btn sign up to sponsor
+        %a.btn sign up to sponsor
+
+        .grid.sponsor-list
+            -#- [1,1,1,1,1].each do
+                .grid-cell.sponsor
+                    -#%img.sponsor-table-img{:src=>""}
+
+        %h1.heading sponsors
 
 
-%section#rules
+.sub-section#prizes
+    .container
+        %h1.heading Prizes
 
-%section#resources
+        .tabs.prizes-wrapper
 
-%section#blog
+            .tab-list
+                .tab-list-item
+            -#- [1,1,1,1,1].each do
+
+            .tab-panels
+                .tab-panel
+
+.sub-section#judges
+    .container
+        %h1.heading Judges
+
+        .grid.judge-list
+            -#-[1,1,1,1,1].each do
+                .grid-cell.judge
+                    %img.judge-image{:src=>""}
+                    .judge-links
+                        i.icon-linkedIn
+                        i.icon-twitter
+
+.sub-section#press-kit
+
+.sub-section#team
+
+%section#social
+    .row
+        .span6.twitter-widget
+            %h1.heading Follow Us <a class='social-link'>@node_knockout</a>
+            .tweets
+                - (1..4).each do
+                    .tweet hello
+
+        .span6.tumblr-widget
+            %h1.heading From our Blog <a class='social-link'>nko.tumblr.com</a>
+            .tumblr-posts
+                - (1..4).each do
+                    .tumblr-post hello
+
+%section#subscribe
+    %input{:value=>"Subscribe with your email to stay up to date on NKO"}
+    .btn Subscribe
+
+%footer
+    .l-left
+        © 2013 NodeKnockout
+    .l-center
+
+        %a{:href=>"#"}
+            %i.icon-email
+            all@nodeknockcout.com
+
+        %a{:href=>"#"}
+            %i.icon-twitter
+            @node_knockout
+    .l-right
+        %a{:href=>"#"} 2010
+        %a{:href=>"#"} 2011
+        %a{:href=>"#"} 2012
+
+-#%section#rules
+
+-#%section#resources
+
+-#%section#blog
 
 
 -# Modals for Sign up as a sponsor goes here
-
-
-
-
-
-

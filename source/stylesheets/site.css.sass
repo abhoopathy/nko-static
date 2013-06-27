@@ -8,11 +8,11 @@
 @import "fonts.css.sass"
 
 body
-  margin: 0
-  padding: 0
-  font-family: $freight
+    margin: 0
+    padding: 0
+    font-family: $freight
 
-  h1.heading
+h1.heading
     border-top: 1px solid #eee
     font-family: $franklin
     font-weight: 400
@@ -20,11 +20,16 @@ body
     text-transform: uppercase
     margin: 0
 
-  ::selection
+::selection
     background: #F62051
     color: #fff
 
-  .btn
+p
+    font-size: 28px
+    line-height: 1.3
+    color: #909090
+
+.btn
     border-radius: 0px
     background: #FD1E50
     padding: 10px
@@ -39,12 +44,12 @@ body
     +transition(.3s)
 
     &:hover
-      background-color: #FE9299
-      color: #fff
-      +transition(.6s)
+        background-color: #FE9299
+        color: #fff
+        +transition(.6s)
 
 
-  header
+header
     background: #000 url("/images/gloves-large.jpg")
     background-repeat: no-repeat
     background-position: center
@@ -54,95 +59,88 @@ body
     width: 100%
 
     h1
-      a.title-block
-        display: inline-block
-        border: 4px solid #fff
-        padding: 3px 11px
-        margin: 10px 0
-        color: #fff
-        text-transform: uppercase
-        font-family: $franklin
-        font-size: 16px
-        font-weight: 700
-        text-decoration: none
+        a.title-block
+            display: inline-block
+            border: 4px solid #fff
+            padding: 3px 11px
+            margin: 10px 0
+            color: #fff
+            text-transform: uppercase
+            font-family: $franklin
+            font-size: 16px
+            font-weight: 700
+            text-decoration: none
 
-        &:hover
-          background: #F62051
-          border-color: transparent
-          +transition(.5s)
+            &:hover
+                background: #F62051
+                border-color: transparent
+                +transition(.5s)
 
 
     h2.subhead
-      font-family: $franklin
-      color: #fff
-      font-size: 52px
+        font-family: $franklin
+        color: #fff
+        font-size: 52px
 
-  section#top
+section#top
 
-    h3.mini
-      color: #F62051
-      text-transform: uppercase
-      font-size: 16px
-      font-family: $franklin
-      text-align: center
+    .top-callout
+        text-align center
 
-    .dates
-      text-align: center
-      font-family: $franklin
-      font-size: 36px
-      span
-        color: #aaa
+        h3.mini
+            color: #F62051
+            text-transform: uppercase
+            font-size: 16px
+            font-family: $franklin
+            display: inline-block
 
-    #register
-      margin: 20px 0
-      text-align: center
-
-
+        .dates
+            text-align: center
+            font-family: $franklin
+            font-size: 36px
+            span
+                color: #aaa
 
     .navbar
-      font-family: $franklin
-      width: 700px
-      margin: 0 auto
+        font-family: $franklin
+        width: 700px
+        margin: 0 auto
 
-      .navbar-inner
-        border: none
-        background: #fff
+        .navbar-inner
+            border: none
+            background: #fff
 
-      ul
-        li
-          text-transform: uppercase
-          list-style-type: none
-          display: inline-block
-          a
-            color: #444
-            &:hover
-              color: #F62051
-              +transition(1s)
+        ul
+            li
+                text-transform: uppercase
+                list-style-type: none
+                display: inline-block
+                a
+                    color: #444
+                    &:hover
+                        color: #F62051
+                        +transition(1s)
 
-    p
-      font-size: 28px
-      line-height: 1.3
-      color: #909090
 
-    .date-box
-      text-transform: uppercase
-      font-family: $franklin
-      line-height: 1.8
-      font-size: 13px
-      color: #999
-      background: #f1f1f1
-      padding: 18px
+.date-box
+    text-transform: uppercase
+    font-family: $franklin
+    line-height: 1.8
+    font-size: 13px
+    color: #999
+    background: #f1f1f1
+    padding: 18px
 
-      .event-left
+    .event-left
         float: left
         position: relative
 
-      .event-date
+    .event-date
         float: right
         white-space: nowrap
         text-align: right
         &:before
-          content: "............................. "
+            content: "............................. "
 
 
 
