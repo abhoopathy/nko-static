@@ -3,43 +3,66 @@
 /[if IE 7] <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8] <html class="no-js lt-ie9">
 %html.no-js
-  %head
-    %meta{:charset => "utf-8"}
-    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %head
+        %meta{:charset => "utf-8"}
+        %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
 
-    -# To set titles and descriptions globally and for each individual page, see /DOCS.md
-    %title= page_title
-    %meta{:content => page_description, :name => "description"}
+        -# To set titles and descriptions globally and for each individual page, see /DOCS.md
+        %title= page_title
+        %meta{:content => page_description, :name => "description"}
 
-    %meta{:content => "width=device-width", :name => "viewport"}
+        %meta{:content => "width=device-width", :name => "viewport"}
 
-    -#Favicon Options:
-    -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
-    -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
-
-
-    = javascript_include_tag "vendor/modernizr-2.6.1.min"
-    = stylesheet_link_tag "site"
+        -#Favicon Options:
+        -#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
+        -#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
 
 
-  %body
-    /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    %div{:role => "main", :class => "main"}= yield
-    %footer
+        = javascript_include_tag "vendor/modernizr-2.6.1.min"
+        = stylesheet_link_tag "site"
+        = stylesheet_link_tag "http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"
 
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
-    :javascript
-      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
-    = javascript_include_tag "site"
 
-    -# adding in typekit stuff
-    = javascript_include_tag "//use.typekit.net/ufz6ztx.js"
+    %body
+        /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+        %div{:role => "main", :class => "main"}= yield
 
-    :javascript
-      try{Typekit.load();}catch(e){}
+        %section#subscribe
+            .l-center
+                %input#subscribe-email-input{:value=>"Subscribe with your email to stay up to date on NKO"}
+                .btn#subscribe-email-button Subscribe
 
-    :javascript
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
+            %footer
+                .container
+                    .l-left
+                        %p © 2013 NodeKnockout
+                    .l-center-text
+                        %a{:href=>"#"}
+                            %i.icon-envelope
+                            all@nodeknockcout.com
+
+                        %a{:href=>"#"}
+                            %i.icon-twitter
+                            @node_knockout
+                    .l-right
+                        %a{:href=>"#"} 2010
+                        %a{:href=>"#"} 2011
+                        %a{:href=>"#"} 2012
+
+
+        = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
+        :javascript
+            window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
+        = javascript_include_tag "site"
+
+        -# adding in typekit stuff
+        = javascript_include_tag "//use.typekit.net/ufz6ztx.js"
+
+        :javascript
+            try{Typekit.load();}catch(e){}
+
+        :javascript
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));

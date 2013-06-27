@@ -27,7 +27,7 @@
                     %li
                         %a{:href => "#blog"} blog
 
-        .top-callout
+        .top-callout.l-center-text
             %h3.mini
                 Main event
 
@@ -38,43 +38,46 @@
                 Register
 
 
-            %h1.heading About NKO2013
-
+        %h1.heading.border-top About NKO2013
 
         .row
             .span6
 
-                %p
+                %p.big-text
                     Node Knockout is a 48-hour hackathon featuring node.js. It's an
                     online, virtual competition with contestants worldwide.
 
-            .span5.date-box
-                important dates to remember<br>
-                .event-left open for registration
-                .event-date June 30, 2013
+            .span5.events
+                %h2 important dates to remember
+                .event
+                    .event-left open for registration
+                    .event-date June 30, 2013
 
-                .event-left competition event-dates
-                .event-date September 6-8, 2013
+                .event
+                    .event-left competition event-dates
+                    .event-date September 6-8, 2013
 
-                .event-left judging period
-                .event-date September 10-17, 2013
+                .event
+                    .event-left judging period
+                    .event-date September 10-17, 2013
 
-                .event-left winners announced
-                .event-date September 18, 2013
+                .event
+                    .event-left winners announced
+                    .event-date September 18, 2013
 
 
 %section#sponsors
     .container
         %h1.heading Sponsors
 
-        %a.btn sign up to sponsor
+        .l-center-text
+            %a.btn sign up to sponsor
 
         .grid.sponsor-list
-            -#- [1,1,1,1,1].each do
+            - (1..12).each do
                 .grid-cell.sponsor
-                    -#%img.sponsor-table-img{:src=>""}
-
-        %h1.heading sponsors
+                    %a{:href=>"#"}
+                        %img.sponsor-table-img{:src => "https://client-side-rendering-talk.nodejitsu.com/img/nodejitsu.png"}
 
 
 .sub-section#prizes
@@ -84,62 +87,88 @@
         .tabs.prizes-wrapper
 
             .tab-list
-                .tab-list-item
-            -#- [1,1,1,1,1].each do
+                .tab-list-item.is-selected
+                    %h2 Team Winner
+                    %p Team with the best overall score
+                - (1..6).each do
+                    .tab-list-item
+                        %h2 Team Winner
+                        %p Team with the best overall score
 
             .tab-panels
-                .tab-panel
+                .tab-panel.is-selected
+                    %p Team Winner
+                - (1..7).each do
+                    .tab-panel
+                        %p Team Winner
 
-.sub-section#judges
+.sub-section.small#judges
     .container
-        %h1.heading Judges
+        .grid.person-list
+            %h1.heading Judges
+            -(1..8).each do
+                .grid-cell.person
+                    .person-image
+                        %img{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+                    %h3.person-name Paul Graham
+                    .person-links
+                        %a{:href=>"#"}
+                            %i.icon-twitter
+                        %a{:href=>"#"}
+                            %i.icon-linkedin
 
-        .grid.judge-list
-            -#-[1,1,1,1,1].each do
-                .grid-cell.judge
-                    %img.judge-image{:src=>""}
-                    .judge-links
-                        i.icon-linkedIn
-                        i.icon-twitter
+.sub-section.small#press-kit
+    %h1.heading Press Kit
+    %a.btn#btn-presskit-images{:href=>'#'}
+        Images (ZIP)
+    %a.btn#btn-presskit-images{:href=>'#'}
+        PDF / Text
+    .poster.l-clear
+        %img.poster-thumbnail.l-left{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+        .poster-info.l-left
+            .l-clear
+                %a.btn#btn-presskit-poster{:href=>'#'} Download Poster
+            %p
+                %b Step 1:
+            %p Download and print this poster and put it in your break room.
 
-.sub-section#press-kit
+            %p
+                %b Step 2:
+            %p Get fired up.
 
-.sub-section#team
+
+.sub-section.small#team
+    .container
+        .grid.person-list
+            %h1.heading Team
+            -(1..4).each do
+                .grid-cell.person
+                    .person-image
+                        %img{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
+                    %h3.person-name Paul Graham
+                    .person-links
+                        %a{:href=>"#"}
+                            %i.icon-twitter
+                        %a{:href=>"#"}
+                            %i.icon-linkedin
+                        %a{:href=>"#"}
+                            %i.icon-envelope
 
 %section#social
-    .row
-        .span6.twitter-widget
-            %h1.heading Follow Us <a class='social-link'>@node_knockout</a>
-            .tweets
-                - (1..4).each do
-                    .tweet hello
+    .container
+        .row
+            .span4.twitter-widget
+                %h2.heading Follow Us <a class='social-link'>@node_knockout</a>
+                .tweets
+                    - (1..5).each do
+                        %p.tweet A recent twitter update might go here.  And it's only 140 chars.
 
-        .span6.tumblr-widget
-            %h1.heading From our Blog <a class='social-link'>nko.tumblr.com</a>
-            .tumblr-posts
-                - (1..4).each do
-                    .tumblr-post hello
+            .span4.tumblr-widget
+                %h2.heading From our Blog <a class='social-link'>nko.tumblr.com</a>
+                .tumblr-posts
+                    - (1..6).each do
+                        %p.tumblr-post This is a tumblr updaaaaaate
 
-%section#subscribe
-    %input{:value=>"Subscribe with your email to stay up to date on NKO"}
-    .btn Subscribe
-
-%footer
-    .l-left
-        © 2013 NodeKnockout
-    .l-center
-
-        %a{:href=>"#"}
-            %i.icon-email
-            all@nodeknockcout.com
-
-        %a{:href=>"#"}
-            %i.icon-twitter
-            @node_knockout
-    .l-right
-        %a{:href=>"#"} 2010
-        %a{:href=>"#"} 2011
-        %a{:href=>"#"} 2012
 
 -#%section#rules
 
