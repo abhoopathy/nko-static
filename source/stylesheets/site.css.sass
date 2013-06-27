@@ -300,8 +300,9 @@ section#top
             width: 100%
 
     .person-name
-        line-height: 2em
+        line-height: 1.2em
         font-weight: lighter
+        margin-bottom: 20px
 
     .person-links
         i
@@ -355,6 +356,12 @@ section#top
         width: 80%
         background-color: white
         padding: 20px
+
+        .tab-panel
+            &:not(.is-selected)
+                display: none
+            &.is-selected
+                display: block
 
 .sub-section
     margin-top: 40px
@@ -445,8 +452,9 @@ footer
             color: lighten($heading-color, 40%)
             font-size: 1.5em
 
-.row.platinum-sponsorship
-    margin-bottom: 30px
+.sponsorship-image
+    width: 131px
+    margin: 20px auto
 
 .divider
     width: 100%

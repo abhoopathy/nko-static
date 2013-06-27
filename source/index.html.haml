@@ -90,17 +90,15 @@
                 .tab-list-item.is-selected
                     %h2 Team Winner
                     %p Team with the best overall score
-                - (1..6).each do
-                    .tab-list-item
-                        %h2 Team Winner
-                        %p Team with the best overall score
+                .tab-list-item
+                    %h2 Tab 2
+                    %p yay
 
             .tab-panels
                 .tab-panel.is-selected
                     %p Team Winner
-                - (1..7).each do
-                    .tab-panel
-                        %p Team Winner
+                .tab-panel
+                    %p I'm tab content
 
 .sub-section.small#judges
     .container
@@ -141,18 +139,53 @@
     .container
         .grid.person-list
             %h1.heading Team
-            -(1..4).each do
-                .grid-cell.person
-                    .person-image
-                        %img{:src=>"http://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Paulgraham_240x320.jpg/200px-Paulgraham_240x320.jpg"}
-                    %h3.person-name Paul Graham
-                    .person-links
-                        %a{:href=>"#"}
-                            %i.icon-twitter
-                        %a{:href=>"#"}
-                            %i.icon-linkedin
-                        %a{:href=>"#"}
-                            %i.icon-envelope
+            .grid-cell.person
+                .person-image
+                    %img{:src=>"images/ash.png"}
+                %h3.person-name Ash </br> Bhoopathy
+                .person-links
+                    %a{:href=>"https://twitter.com/ashbhoopathy"}
+                        %i.icon-twitter
+                    %a{:href=>"http://www.linkedin.com/in/ashbhoopathy"}
+                        %i.icon-linkedin
+                    %a{:href=>"mailto:ash"}
+                        %i.icon-envelope
+
+            .grid-cell.person
+                .person-image
+                    %img{:src=>"images/jacques.png"}
+                %h3.person-name Jacques </br> Crocker
+                .person-links
+                    %a{:href=>"https://twitter.com/railsjedi"}
+                        %i.icon-twitter
+                    %a{:href=>"www.linkedin.com/in/jacquescrocker‎"}
+                        %i.icon-linkedin
+                    %a{:href=>"mailto:ash"}
+                        %i.icon-envelope
+
+            .grid-cell.person
+                .person-image
+                    %img{:src=>"images/rich.png"}
+                %h3.person-name Richard </br> Lengsavath
+                .person-links
+                    %a{:href=>"https://twitter.com/RichLengsavath"}
+                        %i.icon-twitter
+                    %a{:href=>"www.linkedin.com/in/richlengsavath"}
+                        %i.icon-linkedin
+                    %a{:href=>"mailto:ash"}
+                        %i.icon-envelope
+
+            .grid-cell.person
+                .person-image
+                    %img{:src=>"images/gerad.png"}
+                %h3.person-name Gerad </br> Suyderhoud
+                .person-links
+                    %a{:href=>"https://twitter.com/gerad"}
+                        %i.icon-twitter
+                    %a{:href=>"www.linkedin.com/in/geradsuyderhoud"}
+                        %i.icon-linkedin
+                    %a{:href=>"mailto:ash"}
+                        %i.icon-envelope
 
 
 
